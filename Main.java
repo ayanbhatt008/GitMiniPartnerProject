@@ -12,6 +12,18 @@ public class Main
 		}
 		return arr;
 	}
+	public static int getFirstEvenNumber(int[][] arr)
+	{
+		for(int i = 0; i < arr.length; i++)
+		{
+			for(int j = 0; j < arr[i].length; j++)
+			{
+				if(arr[i][j] % 2 == 0)
+					return arr[i][j];
+			}
+		}
+		return -1;
+	}
 	public static void main(String[] args)
 	{
 		int[][] arr = squareArray(3);
@@ -23,5 +35,6 @@ public class Main
 			}
 			System.out.println();
 		}
+		System.out.println(getFirstEvenNumber(arr));
 	}
 }
