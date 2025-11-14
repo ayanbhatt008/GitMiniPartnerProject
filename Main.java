@@ -1,3 +1,5 @@
+//Follows Never Nester
+
 public class Main
 {
 	public static int[][] squareArray(int size)
