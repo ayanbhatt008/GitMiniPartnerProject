@@ -52,6 +52,21 @@ public class Main
 		}
 		return -1;
 	}
+	public static int oddAndAround(int[][] arr)
+	{
+		for(int i = 1; i < arr.length - 1; i++)
+		{
+			for(int j = 1; j < arr[i].length - 1; j++)
+			{
+				if(arr[i][j] % 2 == 0)
+					continue;
+				int sum = arr[i][j - 1] + arr[i][j + 1] + arr[i + 1][j] + arr[i - 1][j];
+				if(sum > 33)
+					return arr[i][j];
+			}
+		}
+		return -1;
+	}
 	public static void main(String[] args)
 	{
 		int[][] arr = squareArray(10);
@@ -65,5 +80,6 @@ public class Main
 		}
 		System.out.println(getFirstEvenNumber(arr));
 		System.out.println(evenAndNeighbor(arr));
+		System.out.println(oddAndAround(arr));
 	}
 }
